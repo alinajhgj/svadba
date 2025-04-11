@@ -1,46 +1,162 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Үйлену тойы шақыруы</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бақытжан мен Қорланның Үйлену Тойы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Marck Script', cursive;
+      background-color: #fffaf7;
+      color: #3a3a3a;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kazakh_pattern.svg/1024px-Kazakh_pattern.svg.png');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 80px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-top: 40px;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .rsvp-section input,
+    .rsvp-section select,
+    .rsvp-section button {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      border-radius: 5px;
+      width: 250px;
+      max-width: 90%;
+    }
+
+    .rsvp-section button {
+      background-color: #e2c4a6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .rsvp-section button:hover {
+      background-color: #cfa883;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #f3eae3;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Үйлену тойына шақыру</h1>
-    </header>
 
-    <section class="invitation">
-        <div class="content">
-            <h2>Той салтанаты:</h2>
-            <p>Жұма 16 Мамыр 2025, HANSHAIYM HALL 2, <br>Бесағаш, Райымбек батыр к-сі, 145а, сағат 17.00</p>
-            <p>Құрметті ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, дос-жарандар, әріптестер, көршілер!</p>
-            <p>Сіздерді балаларымыз <strong>Бақытжан мен Қорланның</strong><br> Үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
-            <p>Келіңіздер қуанышымызға ортақ болыңыздар!</p>
-            <p>Тойға қатысуыңызды растауыңызды сұраймыз!</p>
-            <p>Той иесі Қуанкүл</p>
-        </div>
-    </section>
+  <header>
+    <h1>Бақытжан мен Қорлан</h1>
+    <p>Үйлену Тойына Шақыру</p>
+  </header>
 
-    <section class="confirmation-form">
-        <h3>Тойға қатысуыңызды растаңыз</h3>
-        <form id="confirmationForm">
-            <label for="name">Аты-жөніңіз:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="attend">Тойға қатысасыз ба?</label>
-            <select id="attend" name="attend" required>
-                <option value="yes">Иә</option>
-                <option value="no">Жоқ</option>
-            </select>
-            <button type="submit">Растау</button>
-        </form>
-    </section>
+  <section class="section">
+    <p>
+      Құрметті ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, дос-жарандар, әріптестер, көршілер!<br><br>
+      Сіздерді балаларымыз <strong>Бақытжан мен Қорланның</strong> үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!<br><br>
+      Келіңіздер, қуанышымызға ортақ болыңыздар!
+    </p>
+    <p><strong>Той иесі: Қуанкүл</strong></p>
+  </section>
 
-    <section class="map">
-        <h3>Карта</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14283.21418093814!2d77.0738708!3d43.2150059!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2ska!4v1587345735147!5m2!1sru!2ska" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+  <section class="section">
+    <h2>Той салтанаты</h2>
+    <p><strong>Жұма 16 Мамыр 2025</strong><br>HANSHAIYM HALL 2, Бесағаш, Райымбек батыр к-сі, 145а<br>Сағат 17.00</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.774818530465!2d76.97678307647813!3d43.256266879137814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836b2e69395bb1%3A0x6b3fd9b0b4b1908f!2sHANSHAIYM%20HALL%202!5e0!3m2!1sru!2skz!4v1712780642145!5m2!1sru!2skz" 
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <section id="rsvp" class="section rsvp-section">
+    <h2>Қатысатыныңызды растаңыз</h2>
+    <form id="rsvpForm">
+      <input type="text" name="name" placeholder="Атыңыз" required>
+      <select name="status" required>
+        <option value="">Қатысасыз ба?</option>
+        <option value="Иә">Иә</option>
+        <option value="Жоқ">Жоқ</option>
+      </select>
+      <br>
+      <button type="submit">Жіберу</button>
+    </form>
+    <p id="successMsg" style="display:none; color: green; margin-top: 10px;">
+      Рақмет! Жауабыңыз қабылданды 🤍
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Бақытжан мен Қорланның Үйлену Тойы
+  </footer>
+
+  <script>
+    const form = document.getElementById('rsvpForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const params = new URLSearchParams(formData);
+
+      fetch('https://script.google.com/macros/s/AKfycbyOijfnmi9v_EK4VnqKOHqmEqmbjzYyhDmhRGwi2owHMkUzhu3qJaiP86bbL9KIIlPi/exec', {
+        method: 'POST',
+        body: params
+      })
+      .then(() => {
+        form.reset();
+        successMsg.style.display = 'block';
+      })
+      .catch(err => alert("Қате болды: " + err));
+    });
+  </script>
+
 </body>
 </html>
